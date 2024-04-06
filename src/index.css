@@ -1,0 +1,60 @@
+.semaforo {
+  width: 120px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.luz {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s;
+  position: relative;
+}
+
+.luz.luz-encendida {
+  opacity: 1;
+}
+
+.luz.luz-apagada {
+  opacity: 0.3;
+}
+
+.luz-roja {
+  background-color: #ff4d4d;
+}
+
+.luz-amarilla {
+  background-color: #ffff66;
+}
+
+.luz-verde {
+  background-color: #66ff66;
+}
+
+.reflejo {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 50% 50%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.luz.reflejo-activo .reflejo {
+  opacity: 0.5;
+}
